@@ -41,7 +41,7 @@ Planet.prototype = {
         }
         
         if (typeof this.tile !== 'undefined') {
-            this.tile.draw(this.pos.x - this.radius, this.pos.y - this.radius,
+            this.tile.draw(this.pos.x, this.pos.y, // Центр тайла
                 this.orbit.center, this.radius);
         }
     }

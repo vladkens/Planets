@@ -9,10 +9,10 @@ function Tile(ctx, img, x, y, w, h) {
 };
 
 Tile.prototype = {
-    draw: function(x, y, p, r) {
+    draw: function(x, y, p) {
         var ctx = this.ctx;
         ctx.save();
-        ctx.translate(x + r, y + r);
+        ctx.translate(x, y);
         ctx.rotate(Math.atan2(p.y - y, p.x - x) + Math.PI / 2);
         this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height,
             -this.width / 2, -this.height / 2, this.width, this.height);
